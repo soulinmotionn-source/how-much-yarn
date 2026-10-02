@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarn Yardage Calculator — How Much Yarn Do I Need?</title>
+<meta name="description" content="Free yarn yardage calculator: find out how much yarn you need for blankets, sweaters, scarves, hats and more, with per-weight yardage charts and skein counts.">
+<link rel="canonical" href="https://www.example.com/index.html">
+<meta name="theme-color" content="#2b2118">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="YarnYardage">
+<meta property="og:title" content="Yarn Yardage Calculator — How Much Yarn Do I Need?">
+<meta property="og:description" content="Free yarn yardage calculator: find out how much yarn you need for blankets, sweaters, scarves, hats and more, with per-weight yardage charts and skein counts.">
+<meta property="og:url" content="https://www.example.com/index.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yarn Yardage Calculator — How Much Yarn Do I Need?">
+<meta name="twitter:description" content="Free yarn yardage calculator: find out how much yarn you need for blankets, sweaters, scarves, hats and more, with per-weight yardage charts and skein counts.">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Yarn Yardage Calculator",
+  "url": "https://www.example.com/index.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Free calculator that estimates how much yarn a knitting or crochet project needs, in yards and skeins."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does crochet use more yarn than knitting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 crochet uses roughly 25\u201330% more yarn than knitting for the same finished size, because crochet stitches are taller and denser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many yards are in a skein of yarn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the weight: roughly 700 yards for lace, 440 for fingering, 330 for sport, 280 for DK, 220 for worsted, 120 for bulky, and 70 for super bulky per 100 g. Always check your yarn label \u2014 the calculator lets you enter the exact number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy extra yarn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Buy at least one extra skein, and buy everything from the same dye lot \u2014 colors can vary slightly between batches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does yarn weight mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yarn weight is the thickness of the strand, numbered 0 (lace) to 7 (jumbo) by the Craft Yarn Council. It is not the physical weight of the skein \u2014 it is the thickness category."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Yarn<span>Yardage</span></a>
+<nav class="top" aria-label="Main navigation"><a href="index.html">Calculator</a><a href="guides/index.html">Guides</a><a href="index.html#projects">Projects</a></nav>
+</div></header>
+<main id="main-content"><div class="wrap">
+
+<h1>Yarn Yardage Calculator</h1>
+<p class="lede">Find out exactly how much yarn your project needs — yardage and skein counts for knit and crochet, in seconds.</p>
+<!-- AdSense: in-content: after intro (responsive) — paste your ad unit code here -->
+<div class="ad-slot" role="complementary" aria-label="Advertisement"><span>Advertisement</span></div>
+<div class="calc-card" id="yarn-calc">
+  <div class="fields">
+    <div class="field">
+      <label for="f-project">Project</label>
+      <select data-field="project" id="f-project"></select>
+    </div>
+    <div class="field">
+      <label for="f-weight">Yarn weight</label>
+      <select data-field="weight" id="f-weight"></select>
+    </div>
+    <div class="field">
+      <label for="f-skein">Yards per skein (from your label)</label>
+      <input data-field="skein" id="f-skein" type="number" min="1" step="1" inputmode="numeric">
+      <div class="hint">Auto-filled for the chosen weight — change it to match your yarn.</div>
+    </div>
+    <div class="field">
+      <label for="f-buffer">Safety buffer (%)</label>
+      <input data-field="buffer" id="f-buffer" type="number" min="0" max="50" step="1" value="10" inputmode="numeric">
+      <div class="hint">10–15% covers gauge differences and mistakes.</div>
+    </div>
+  </div>
+  <div data-field="result" aria-live="polite"></div>
+</div>
+<!-- AdSense: in-content: after calculator (responsive) — paste your ad unit code here -->
+<div class="ad-slot" role="complementary" aria-label="Advertisement"><span>Advertisement</span></div>
+<h2 id="projects">Yardage by project</h2>
+<p>Pick your project for detailed yardage charts, skein counts, and FAQs:</p>
+<div class="project-grid">
+<a href="projects/how-much-yarn-for-a-baby-blanket.html">How Much Yarn for a Baby Blanket?<small>Standard baby blanket: 30″ × 36″ (76 × 91 cm)</small></a>
+<a href="projects/how-much-yarn-for-a-throw-blanket.html">How Much Yarn for a Throw Blanket?<small>Standard throw: 52″ × 60″ (132 × 152 cm)</small></a>
+<a href="projects/how-much-yarn-for-a-queen-size-blanket.html">How Much Yarn for a Queen Size Blanket?<small>Queen blanket: 90″ × 90″ (229 × 229 cm)</small></a>
+<a href="projects/how-much-yarn-for-a-king-size-blanket.html">How Much Yarn for a King Size Blanket?<small>King blanket: 108″ × 108″ (274 × 274 cm)</small></a>
+<a href="projects/how-much-yarn-for-a-twin-size-blanket.html">How Much Yarn for a Twin Size Blanket?<small>Twin blanket: 66″ × 90″ (168 × 229 cm)</small></a>
+<a href="projects/how-much-yarn-for-a-scarf.html">How Much Yarn for a Scarf?<small>Average scarf: 8″ × 60″ (20 × 152 cm)</small></a>
+<a href="projects/how-much-yarn-for-a-cowl.html">How Much Yarn for a Cowl?<small>Average cowl: 26″ circumference × 10″ tall</small></a>
+<a href="projects/how-much-yarn-for-a-hat.html">How Much Yarn for a Hat?<small>Adult hat: ~22″ head circumference</small></a>
+<a href="projects/how-much-yarn-for-a-pair-of-socks.html">How Much Yarn for a Pair of Socks?<small>Adult pair, mid-calf length</small></a>
+<a href="projects/how-much-yarn-for-mittens.html">How Much Yarn for Mittens?<small>Adult pair</small></a>
+<a href="projects/how-many-skeins-of-yarn-for-a-sweater.html">How Many Skeins of Yarn for a Sweater?<small>Adult medium pullover</small></a>
+<a href="projects/how-much-yarn-for-a-baby-sweater.html">How Much Yarn for a Baby Sweater?<small>Baby sweater, 12-month size</small></a>
+<a href="projects/how-much-yarn-for-a-cardigan.html">How Much Yarn for a Cardigan?<small>Adult medium cardigan</small></a>
+<a href="projects/how-much-yarn-for-a-shawl.html">How Much Yarn for a Shawl?<small>Medium triangular shawl</small></a>
+<a href="projects/how-much-yarn-for-a-vest.html">How Much Yarn for a Vest?<small>Adult medium vest</small></a>
+<a href="projects/how-much-yarn-for-a-crochet-market-bag.html">How Much Yarn for a Crochet Market Bag?<small>Standard market bag with handles</small></a>
+<a href="projects/how-much-yarn-for-amigurumi.html">How Much Yarn for Amigurumi?<small>Small toy (~6″ tall)</small></a>
+<a href="projects/how-much-yarn-for-a-crochet-rug.html">How Much Yarn for a Crochet Rug?<small>Round rug, 36″ diameter</small></a>
+</div>
+<h2 id="weights">Standard yarn weights</h2>
+<p>The Craft Yarn Council standardizes yarn by thickness. Thicker yarn needs less yardage for the same project — but each skein also holds fewer yards.</p>
+<div class="table-scroll"><table class="data">
+<tr><th>Weight</th><th>Yards per 100 g</th><th>Common uses</th></tr>
+<tr><td>Lace (0)</td><td>600–800 yds / 100 g</td><td>Lace shawls, fine doilies</td></tr>
+<tr><td>Super Fine / Fingering (1)</td><td>400–460 yds / 100 g</td><td>Socks, lightweight shawls</td></tr>
+<tr><td>Fine / Sport (2)</td><td>300–350 yds / 100 g</td><td>Baby garments, light sweaters</td></tr>
+<tr><td>Light / DK (3)</td><td>250–300 yds / 100 g</td><td>Sweaters, baby blankets</td></tr>
+<tr><td>Medium / Worsted (4)</td><td>200–230 yds / 100 g</td><td>Sweaters, blankets, scarves</td></tr>
+<tr><td>Bulky (5)</td><td>100–130 yds / 100 g</td><td>Quick knits, chunky blankets</td></tr>
+<tr><td>Super Bulky (6)</td><td>60–80 yds / 100 g</td><td>Arm knitting, rugs</td></tr>
+</table></div>
+<h2>How to calculate yarn yardage</h2>
+<p><strong>Step 1 — total yardage:</strong> multiply the skeins your pattern calls for by the yardage on the pattern's yarn label. <strong>Step 2 — your yarn:</strong> divide that total by the yardage per skein of the yarn you actually bought. <strong>Step 3:</strong> round up and add a 10–15% buffer.</p>
+<h2>Yarn guides &amp; tutorials</h2>
+<p>Learn the skills behind the numbers — from <a href="guides/yarn-weight-chart-explained.html">reading yarn weight charts</a> to <a href="guides/how-to-substitute-yarn-in-a-pattern.html">substituting yarn in patterns</a>:</p>
+<div class="guide-grid">
+<a href="guides/yarn-weight-chart-explained.html"><strong>Yarn Weight Chart Explained: From Lace to Jumbo</strong><small>Yarn weight is the single most important number on a yarn label — and the most misunderstood. This guide walks…</small></a>
+<a href="guides/how-to-read-a-yarn-label.html"><strong>How to Read a Yarn Label: Yardage, Weight, Fiber &amp; More</strong><small>That paper band around your skein is a cheat sheet: it tells you exactly how much yarn you have, what it&#x27;s mad…</small></a>
+<a href="guides/fingering-vs-dk-vs-worsted.html"><strong>Fingering vs DK vs Worsted: Which Yarn Weight to Choose</strong><small>These three weights cover most knitting and crochet projects — but they behave very differently. Here&#x27;s how fi…</small></a>
+<a href="guides/how-to-substitute-yarn-in-a-pattern.html"><strong>How to Substitute Yarn in a Pattern (Yardage Math Made Simple)</strong><small>Found the perfect pattern but not the exact yarn? You don&#x27;t need the pattern&#x27;s yarn — you need its yardage. He…</small></a>
+<a href="guides/best-yarn-for-baby-blankets.html"><strong>Best Yarn for Baby Blankets: Soft, Safe &amp; Washable Picks</strong><small>A baby blanket gets chewed, dragged, and washed weekly — so the best yarn is soft against newborn skin, machin…</small></a>
+<a href="guides/yarn-buffer-rule.html"><strong>How Many Skeins Do You Need? The 10% Buffer Rule</strong><small>Every yarn estimate assumes average gauge, an average size, and average luck. Real projects are none of those.…</small></a>
+</div>
+<p><a href="guides/index.html">Browse all yarn guides &rarr;</a></p>
+<!-- AdSense: in-content: before FAQs (responsive) — paste your ad unit code here -->
+<div class="ad-slot" role="complementary" aria-label="Advertisement"><span>Advertisement</span></div>
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<details><summary>Does crochet use more yarn than knitting?</summary><p>Yes — crochet uses roughly 25–30% more yarn than knitting for the same finished size, because crochet stitches are taller and denser.</p></details>
+<details><summary>How many yards are in a skein of yarn?</summary><p>It depends on the weight: roughly 700 yards for lace, 440 for fingering, 330 for sport, 280 for DK, 220 for worsted, 120 for bulky, and 70 for super bulky per 100 g. Always check your yarn label — the calculator lets you enter the exact number.</p></details>
+<details><summary>Should I buy extra yarn?</summary><p>Yes. Buy at least one extra skein, and buy everything from the same dye lot — colors can vary slightly between batches.</p></details>
+<details><summary>What does yarn weight mean?</summary><p>Yarn weight is the thickness of the strand, numbered 0 (lace) to 7 (jumbo) by the Craft Yarn Council. It is not the physical weight of the skein — it is the thickness category.</p></details>
+</div>
+</div></main>
+<footer class="site"><div class="wrap">
+<nav class="foot-links" aria-label="Footer navigation"><a href="index.html">Calculator</a><a href="guides/index.html">Guides</a><a href="index.html#projects">All projects</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+<p class="disclaimer">Yardage figures are planning estimates for average-size projects and typical gauges. Your gauge, stitch pattern, and finished size change the numbers — always buy an extra skein, and check your pattern's yardage first.</p>
+<p class="disclaimer">Disclosure: YarnYardage is reader-supported. We display ads served by Google AdSense and may earn a commission on qualifying purchases made through links on this site.</p>
+<p>&copy; 2026 YarnYardage. Free yarn yardage calculator.</p>
+</div></footer>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+<p>We use cookies to run this site and to serve ads via Google AdSense and its partners. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+<button type="button" id="cookie-ok">Got it</button>
+</div>
+<script>
+(function(){var b=document.getElementById('cookie-banner');
+try{if(!localStorage.getItem('yy_consent')){b.hidden=false;}}catch(e){b.hidden=false;}
+document.getElementById('cookie-ok').addEventListener('click',function(){
+try{localStorage.setItem('yy_consent','1');}catch(e){}b.hidden=true;});})();
+</script>
+<script src="calculator.js"></script>
+</body>
+</html>
